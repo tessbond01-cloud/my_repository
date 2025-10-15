@@ -1,0 +1,415 @@
+/**
+ * Custom Add to Cart Button Styles
+ * Professional styling for the AJAX-powered Add to Cart functionality
+ */
+
+/* ==========================================================================
+   Custom Add to Cart Wrapper
+   ========================================================================== */
+
+.custom-add-to-cart-wrapper {
+    margin: 30px 0;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+/* ==========================================================================
+   Quantity Selector
+   ========================================================================== */
+
+.quantity-selector {
+    margin-bottom: 20px;
+}
+
+.quantity-selector label {
+    display: block;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.quantity-selector .quantity {
+    display: inline-block;
+}
+
+.quantity-selector input.qty {
+    width: 80px;
+    padding: 12px;
+    border: 2px solid #dee2e6;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #495057;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.quantity-selector input.qty:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* ==========================================================================
+   Custom Add to Cart Button
+   ========================================================================== */
+
+.custom-add-to-cart-btn {
+    position: relative;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.custom-add-to-cart-btn:hover {
+    background: linear-gradient(135deg, #229954, #27ae60);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.custom-add-to-cart-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(39, 174, 96, 0.3);
+}
+
+.custom-add-to-cart-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+}
+
+/* Button States */
+.custom-add-to-cart-btn.loading {
+    background: linear-gradient(135deg, #3498db, #5dade2);
+    cursor: wait;
+}
+
+.custom-add-to-cart-btn.success {
+    background: linear-gradient(135deg, #27ae60, #58d68d);
+    animation: successPulse 0.6s ease-out;
+}
+
+.custom-add-to-cart-btn.error {
+    background: linear-gradient(135deg, #e74c3c, #ec7063);
+    animation: errorShake 0.6s ease-out;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Button Content States */
+.btn-text,
+.btn-loading,
+.btn-success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-loading .loading-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   Add to Cart Feedback
+   ========================================================================== */
+
+.add-to-cart-feedback {
+    margin-top: 15px;
+    padding: 12px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.add-to-cart-feedback.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.add-to-cart-feedback.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ==========================================================================
+   Out of Stock State
+   ========================================================================== */
+
+.out-of-stock-message {
+    text-align: center;
+    padding: 20px;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.out-of-stock-message .stock {
+    font-size: 16px;
+    font-weight: 600;
+    color: #856404;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Product Availability
+   ========================================================================== */
+
+.product-availability {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.product-availability .stock {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.product-availability .in-stock {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.product-availability .out-of-stock {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.product-availability .available-on-backorder {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+/* ==========================================================================
+   Notification System
+   ========================================================================== */
+
+.cart-notifications {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    max-width: 400px;
+}
+
+.cart-notification {
+    background: white;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-left: 4px solid;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: slideInRight 0.3s ease-out;
+}
+
+.cart-notification:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cart-notification-success {
+    border-left-color: #27ae60;
+    color: #155724;
+    background: linear-gradient(90deg, #d4edda, white);
+}
+
+.cart-notification-error {
+    border-left-color: #e74c3c;
+    color: #721c24;
+    background: linear-gradient(90deg, #f8d7da, white);
+}
+
+.cart-notification-info {
+    border-left-color: #3498db;
+    color: #0c5460;
+    background: linear-gradient(90deg, #d1ecf1, white);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ==========================================================================
+   Form Validation States
+   ========================================================================== */
+
+.custom-cart-form .field-error input {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.custom-cart-form .field-error .error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   Mobile Responsive Design
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .custom-add-to-cart-wrapper {
+        margin: 20px 0;
+        padding: 20px 15px;
+    }
+    
+    .custom-add-to-cart-btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+        min-height: 45px;
+    }
+    
+    .quantity-selector input.qty {
+        width: 70px;
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .cart-notifications {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+    
+    .cart-notification {
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-add-to-cart-wrapper {
+        padding: 15px 10px;
+    }
+    
+    .custom-add-to-cart-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+        min-height: 40px;
+        letter-spacing: 0.3px;
+    }
+    
+    .quantity-selector label {
+        font-size: 13px;
+    }
+    
+    .quantity-selector input.qty {
+        width: 60px;
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
+/* ==========================================================================
+   High Contrast Mode Support
+   ========================================================================== */
+
+@media (prefers-contrast: high) {
+    .custom-add-to-cart-btn {
+        border: 2px solid #000;
+        background: #000;
+        color: #fff;
+    }
+    
+    .custom-add-to-cart-btn:hover {
+        background: #333;
+        border-color: #333;
+    }
+    
+    .quantity-selector input.qty {
+        border: 2px solid #000;
+    }
+}
+
+/* ==========================================================================
+   Reduced Motion Support
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .custom-add-to-cart-btn,
+    .cart-notification,
+    .loading-spinner {
+        animation: none;
+        transition: none;
+    }
+    
+    .custom-add-to-cart-btn:hover {
+        transform: none;
+    }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    .custom-add-to-cart-wrapper,
+    .cart-notifications {
+        display: none;
+    }
+}
