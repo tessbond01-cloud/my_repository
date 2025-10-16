@@ -561,3 +561,7 @@ a.checkout-button.button.alt.wc-forward:hover {
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button {
 	color: #555;
 }
+
+.wc-block-components-sidebar-layout .wc-block-components-main {
+	width: 45% !important;
+}

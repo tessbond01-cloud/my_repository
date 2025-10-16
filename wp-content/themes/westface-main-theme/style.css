@@ -3101,16 +3101,16 @@ input[type="submit"]:hover {
     border: 1px solid var(--border-color);
 }
 
-.cross-sells h2,
+/*.cross-sells h2,
 .upsells h6 {
-    /* color: var(--primary-color);
+     color: var(--primary-color);
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
     margin: 0 0 30px;
     padding-bottom: 15px;
-    border-bottom: 2px solid var(--primary-color); */
-}
+    border-bottom: 2px solid var(--primary-color); 
+}*/
 
 .site-content {
     margin-top: 0;
@@ -4887,7 +4887,7 @@ select:focus {
     height: 6px;
     background: transparent;
     outline: none;
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;*/
     pointer-events: none;
 }
 
@@ -9040,7 +9040,7 @@ select:focus {
 
 .woocommerce, .woocommerce-page, .cart-collaterals {
     font-family: 'Roboto', Arial, sans-serif !important;
-     color: #555;
+    color: #555;
 }
 
 /* The table containing the list of products and our custom elements */
