@@ -526,8 +526,7 @@ a.checkout-button.button.alt.wc-forward:hover {
    ========================================================================== */
 
 .woocommerce-message,
-.woocommerce-error,
-.woocommerce-info {
+.woocommerce-error {
     margin: 20px 0;
     padding: 15px 20px;
     border-radius: 5px;
@@ -546,8 +545,19 @@ a.checkout-button.button.alt.wc-forward:hover {
     color: #721c24;
 }
 
-.woocommerce-info {
+/*.woocommerce-info {
     background: #d1ecf1;
     border-left-color: #3498db;
     color: #0c5460;
+}
+*/
+
+.woocommerce-info {
+	border-top: none;
+	color: #555;
+	position: unset;
+}
+
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button {
+	color: #555;
 }
